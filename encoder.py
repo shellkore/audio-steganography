@@ -18,7 +18,7 @@ def encode(msg,inputFile='name.wav', outputFile = 'output.wav'):
 	# print(len(frame_bytes))
 	# print(frame_bytes)
 
-	string='Shellkore is Cool!!'
+	string = msg
 	# Append dummy data to fill out rest of the bytes. Receiver shall detect and remove these characters.
 	string = string + int((len(frame_bytes)-(len(string)*8*8))/8) *'#'
 	# Convert text to bit array
@@ -39,7 +39,6 @@ def encode(msg,inputFile='name.wav', outputFile = 'output.wav'):
 def main():
 	msg = "shellkore hides message in audio file"
 	encode(msg)
-
 
 if __name__ == '__main__':
 	main()
